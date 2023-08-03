@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="contanier">
+        <div class="navbar">
+            <img src="Mahindra-Logo.png" class="logo">
+            <nav>
+                <ul id="menuList">
+                    <li><a href="#section1">EXPLORE THAR</a></li>
+                    <li><a href="#section2">FEATURES</a></li>
+                    <li><a href="#section3">GALLERY</a></li>
+                    <li><a href="#section4">CONTACT</a></li>
+                </ul>
+            </nav>
+            <img src="manuicon.png" class="icon" onclick="togglemenu()">
+        </div>
+        <section id="section1">
+            <div class="row">
+                <div class="col-1">
+                    <h2>EXPLORE <span>THAR</span></h2>
+                    <h3>Here is where the impossible begins</h3>
+                    <p>An enduring icon that just keeps on giving,The All-New Thar comes equipped with the iconic design
+                        and
+                        all new interiors to help you Explore The Impossible</p>
+                    <h4>Power Full</h4>
+                    <button type="button">Buy Now</button>
+                </div>
+                <div class="col-2">
+                    <img src="blackthar.jpg" class="car">
+                    <div class="color-box"></div>
+                </div>
+            </div>
+        </section>
+        <section id="section2">
+            <div class="features">
+                <div class="col1">
+                    <h2>FEATURES & SPECIFICATIONS</h2>
+                    <h3>
+                        <ul>
+                            <li>Design</li>
+                            <li>Perfomence and Capability</li>
+                            <li>Comfort</li>
+                            <li>Techonogy</li>
+                            <li>Safety</li>
+                        </ul>
+                    </h3>
+                </div>
+            </div>
+        </section>
+        <section id="section3">
+            <div class="gallery">
+                <h2>GALLERY</h2>
+                <div class="slideshow-container">
+                    <div class="mySlides1">
+                        <img src="img3.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides1">
+                        <img src="Mahindra-Thar-4WD.jpg" style="width:100%">
+                    </div>
+
+                    <div class="mySlides1">
+                        <img src="img2.jpg" style="width:100%">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1, 0)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1, 0)">&#10095;</a>
+                </div>
+            </div>
+        </section>
+        <section id="section4" >
+            <div class="social-link">
+                <a href="https://www.instagram.com/people_who_rise/"><img src="instagram.jpeg"></img></a>
+                <img src="thread.png"></img>
+                <a href="https://www.facebook.com/MahindraRise/"><img src="facebook.png"></img></a>
+                <a href="https://twitter.com/mahindrarise"><img src="twitter.jpeg"></img></a>
+            </div>
+        </section>
+        
+    </div>
+    <script>
+        // script for menu icon in responsive  
+
+        var menuList = document.getElementById("menuList");
+
+        menuList.style.maxHeight = "0px";
+        function togglemenu() {
+            if (menuList.style.maxHeight == "0px") {
+                menuList.style.maxHeight = "130px";
+            }
+            else {
+                menuList.style.maxHeight = "0px";
+            }
+        }
+
+
+        // script for image slider
+
+        let slideIndex = [1, 1];
+        let slideId = ["mySlides1", "mySlides2"]
+        showSlides(1, 0);
+        showSlides(1, 1);
+
+        function plusSlides(n, no) {
+            showSlides(slideIndex[no] += n, no);
+        }
+
+        function showSlides(n, no) {
+            let i;
+            let x = document.getElementsByClassName(slideId[no]);
+            if (n > x.length) { slideIndex[no] = 1 }
+            if (n < 1) { slideIndex[no] = x.length }
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex[no] - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>
