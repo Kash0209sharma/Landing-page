@@ -196,10 +196,20 @@ h3 ul {
     font-size: 60px;
 }
 
+
 img {
     vertical-align: middle;
     border-radius: 25px;
 
+}
+
+.up img{
+    position: fixed;
+    width: 70px;
+    cursor: pointer;
+    bottom: 20px;
+    right: 10px;
+    
 }
 
 
