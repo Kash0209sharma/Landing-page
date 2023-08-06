@@ -20,7 +20,7 @@
                     <li><a href="#section4">CONTACT</a></li>
                 </ul>
             </nav>
-            <img src="manuicon.png" class="icon" onclick="togglemenu()">
+            <img src="manuicon.png" id="menu" class="icon" onclick="togglemenu()">
         </div>
         <section id="section1">
             <div class="row">
@@ -99,6 +99,13 @@
             else {
                 menuList.style.maxHeight = "0px";
             }
+            let threeLine = document.getElementById('menu') // in this sentance we get menu icon and store on threeLine 
+                if (threeLine.src.match('manuicon.png')) {  //in this we check menuicon imag  with current image it true then chnge image
+                    threeLine.src = 'cross.png'; //new image
+                }
+                else {
+                    threeLine.src = 'manuicon.png';
+                }
         }
 
 
