@@ -342,4 +342,12 @@ img {
     .gallery h2 {
         font-size: 35px;
     }
+    .up img{
+        position: fixed;
+        width: 40px;
+        cursor: pointer;
+        bottom: 20px;
+        right: 10px;
+        
+    }
 }
